@@ -1,0 +1,78 @@
+
+#recursos {
+  /* dimensiones */
+  width: 100%; max-width: 100%;
+  /* display y alineación */
+  display: flex; flex-direction: column;
+  justify-content: center; justify-items: center;
+}
+
+
+
+/* seccion recursos --> ejemplo: gva y transporte */
+.seccion-recursos:first-of-type{ margin-top: 10vh !important; }
+.seccion-recursos{ margin: 0 8vw; }
+
+.seccion-recursos h2{ font-size: 2.5vw; }
+
+.seccion-recursos h3 {
+  width: 100%;
+  font-size: 2vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: solid 5px var(--amarillo-main);
+}
+
+/* subseccion recursos --> ejemplo: metro, bus */
+.subseccion-recursos{ display: grid; grid-template-columns: repeat(2,1fr); gap: 2vw; border-bottom: solid transparent 10vh;}
+
+/* OTROS RECURSOS */
+/* todo: hacer otro componente con esta estructura */
+
+.otros-recursos{ grid-column-start: 1; grid-column-end: 3; justify-self: center; width: 80%; }
+
+.otros-recursos .cuerpo-recurso p{margin: 0.5vh 0;}
+
+/* header */
+.otros-recursos .header-recurso {
+  height: 7.5vh; width: 100%;
+  display: flex;  align-items: center;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+.otros-recursos .recurso-img-container img{border-radius: 1vw;}
+
+.otros-recursos .header-recurso * { max-height: 7.5vh; max-width: 7.5vw;}
+
+.otros-recursos .header-recurso h2{ font-size: 2vw; text-wrap: nowrap;}
+
+/* cuerpo */
+
+.otros-recursos .cuerpo-recurso{ display: flex; flex-direction: column; }
+
+.otros-recursos .cuerpo-recurso p a{ text-decoration: underline; }
+
+.otros-recursos .cuerpo-recurso h4{ font-size: 1vw; margin: 0.5vh 0;}
+
+.otros-recursos .cuerpo-recurso p{ font-size: 1.1vw; color: var(--amarillo-main);}
+
+.otros-recursos .cuerpo-recurso ul{ margin: 0.5vh 0; }
+
+.otros-recursos .cuerpo-recurso ul li{ font-size: 1vw; }
+
+/* hovers */
+
+.otros-recursos .footer-recurso a:hover img{ filter: drop-shadow(0 0 20px var(--amarillo-main)); }
+
+.otros-recursos .cuerpo-recurso p a:hover{ color: var(--amarillo-enfasis);}
+
+@media only screen and (max-width: 1080px) {
+  .subseccion-recursos { border-bottom: 0vh; }
+}
+
+@media only screen and (max-width: 720px) {
+  .subseccion-recursos { grid-template-columns: repeat(1,1fr); margin-bottom: 1vh; gap: 3vh;}
+  .seccion-recursos h2{ font-size: 7.5vw; }
+  .seccion-recursos h3 { font-size: 5vw; }
+}

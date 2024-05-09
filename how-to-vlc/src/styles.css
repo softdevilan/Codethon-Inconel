@@ -1,0 +1,264 @@
+/******************************************************* COLORES ******************************************************/
+
+:root{ /* ¡¡IMPORTANTE!! Variables para los colores, usar estas y añadir colores aquí */
+    --background : #080735;
+    --item-background-semitransparent : hsla(258, 48%, 19%, 0.6);
+    --item-background : #271948;
+    --subitem-background : #271948a1;
+
+    --amarillo-main : rgb(255, 234, 0);
+    --amarillo-enfasis : #826c00;
+
+    --placeholder-item : #646076;
+
+    --gris : grey;
+    --blanco : white;
+}
+
+/******************************************************* GENERAL ******************************************************/
+
+*{
+  font-family: "Mukta", Arial, Helvetica, sans-serif;
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+/******************************************************* BODY ******************************************************/
+
+body{ margin: 0; }
+
+/******************************************************* DASHBOARD ******************************************************/
+
+/* margen para las divisiones left y right, las separa del borde y entre ellas */
+.left-dashboard, .dashboard-container .right-dashboard { margin: 1vh 2vw; }
+
+/* gap y alineación para los containers left-right y subcontainers */
+.left-dashboard, .left-dashboard .container,
+.right-dashboard, .right-dashboard .container
+{
+  gap: 2vh 2vw;
+  justify-content: center;
+  min-height: fit-content;
+}
+
+/* estilos para items del dashboard */
+
+/* IMAGENES */
+
+.img-container { /* el container de las fotos/miniaturas de las apps */
+  display: flex !important;
+}
+
+.img-container .img-logo-full /* estilos para las fotos/miniaturas de apps */
+{
+  /* dimensiones */
+  height: 100% !important; width: 100% !important;
+  min-height: 100% !important; min-width: 100% !important;
+
+  object-fit: cover; /* para que no se distorsionen al redimensionarse */
+
+  border-radius: 2vh; /* borde */
+
+  transition: ease-in-out 200ms 50ms;
+}
+
+.dashboard-items-container /* items que contienen otros items */
+{
+  min-width: fit-content; /* dimensiones */
+  border-radius: 2vh; /* borde */
+  padding: 0.5vh 0vw; /* separaciones */
+}
+
+.container .item /* items individuales */
+{
+  height: 10vh; max-width: 100%; /* dimensiones */
+  border-radius: 2vh; /* borde */
+  align-content: space-around; align-self: center; /* alineación */
+}
+
+.section-container{
+  display: grid !important;
+  border: none !important;
+}
+
+.img-nofull{
+  align-self: flex-end;
+  /* dimensiones */
+  height: 100% !important; width: 100% !important;
+  min-height: 50% !important; min-width: 100% !important;
+  max-height: 100% !important;
+
+  object-fit: cover; /* para que no se distorsionen al redimensionarse */
+
+  border-radius: 2vh; /* borde */
+
+  transition: ease-in-out 50ms 50ms;
+}
+
+/* IZQUIERDA */
+
+.left-dashboard
+{
+    /* ocupa 2 de 5 columnas */
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    /* propiedades del div izquierdo: tiene 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.left-dashboard .dashboard-items-container /* items que contienen otros items */
+{
+    background-color: var(--item-background-semitransparent);
+    padding: 2vh 1vw;
+}
+
+.left-dashboard .container .item /* items individuales */
+{
+    /* este color es temporal, no se tiene que ver ya que va una imagen */
+    background-color: transparent; /* background */
+}
+
+.left-dashboard .greeting-area {
+  padding: 3vh 1vw;
+}
+
+/* DERECHA */
+
+.right-dashboard
+{
+    /* ocupa 3 de 5 columnas */
+    grid-column-start: 3;
+    grid-column-end: end;
+
+    /* propiedades del div derecho: tiene tres columnas */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.right-dashboard .dashboard-items-container /* items que contienen otros items */
+{
+    background-color: var(--item-background-semitransparent);
+    /* border: solid var(--item-background) 15px; */ border-radius: 2vh;
+}
+
+.right-dashboard .container .item /* items individuales */
+{
+    height: 15vh; min-height: fit-content; /* dimensiones */
+    background-color: var(--subitem-background); /* background */
+}
+
+/* red social */
+
+.red-social{
+    overflow: auto; /* overflow: que no se pase del container */
+    height: 75vh;
+/*     background-image: url(assets/img/ciudad-artes-ciencias.avif); */
+    background-size: cover;
+    column-gap: 0.5vw;
+    padding: 2vh 1vw;
+    border-radius: 2.75vh !important;
+}
+
+.red-social h2, .red-social .section-header i{
+    font-size: 2.75vh; padding: 0 0.5vw; margin: 0;
+}
+
+.red-social h3{ font-size: 1.8vh;}
+
+.red-social form{
+    justify-items: center;
+    justify-self: center;
+    max-height: 100%; width: 100%; max-width: 100%;
+}
+
+.red-social form .section-header{
+    display: flex !important;
+    align-items: center; justify-content: space-between;
+}
+
+.red-social form label{
+    align-items: center;
+    font-size: 1vw;
+    padding: 0;
+    margin: 1vh 1vw 0vh 1vw;
+}
+
+.red-social form select, .red-social form input{
+
+    display: flex !important; align-items: center !important;
+    width: fit-content; height: 4vh;
+    padding: 0.25vh 0.5vw;
+    margin: 1vh;
+
+    font-size: 1.5vh;
+    color: var(--amarillo-main);
+
+    border: solid transparent 0.2vw;
+    border-radius: 1vh;
+
+    background-color: hsla(235, 73%, 14%, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.red-social form .nombreEvento, .red-social form textarea{
+    padding: 0.5vh 0.5vw;
+
+    font-size: 1.5vh;
+    color: var(--amarillo-main);
+
+    border: solid transparent 0.2vw;
+    border-radius: 1vh;
+
+    background-color: var(--item-background);
+}
+
+.red-social form textarea{
+    resize: vertical;
+    min-height: 5vh; max-height: 15vh;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.red-social .img-link-seccion{
+    /* dimensiones */
+    height: 60vh !important; width: 100% !important;
+
+    object-fit: cover; /* para que no se distorsionen al redimensionarse */
+
+    border-radius: 2vh; /* borde */
+
+    transition: ease-in-out 250ms 50ms;
+ }
+
+ .red-social .button{
+    width: 5vw; min-width: fit-content;
+    transition: ease-in 150ms 0.5ms;
+    font-weight: 700;
+ }
+
+ .red-social *::placeholder{
+    color: var(--placeholder-item);
+ }
+
+/* hovers */
+
+.left-dashboard .img-container:hover .img-logo-full{ transform: scale(1.1); }
+.right-dashboard .img-container:hover .img-logo-full{ transform: scale(1.05); }
+
+.left-dashboard .img-container:active .img-logo-full,
+.right-dashboard .img-container:active .img-logo-full,
+.red-social .img-link-seccion:active
+{ transform: scale(1%) !important; transition: ease-in 50ms 1ms; }
+
+.right-dashboard .img-container:active .img-logo-full{ transition: ease-in 100ms 0.5ms; }
+
+.red-social .img-link-seccion:hover{ filter: drop-shadow(0 5px 10px var(--amarillo-main)); }
+
+.red-social .button:hover{
+    background-color: var(--amarillo-main); color: var(--item-background);
+    box-shadow: -0.2vw 0.2vw var(--subitem-background);
+}
+.red-social .button:active{ background-color: var(--amarillo-enfasis); }
+
+
+/***************************************************** FIN DASHBOARD **************************************************/

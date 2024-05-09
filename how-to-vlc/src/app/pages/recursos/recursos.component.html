@@ -1,0 +1,152 @@
+<div id="recursos" class="recursos-container">
+
+    <section id="transporte" class="seccion-recursos transporte">
+
+        <h2>Transporte público</h2>
+
+        <!-- Bus -->
+        <h3>Bus</h3>
+        <article id="bus" class="subseccion-recursos bus">
+
+            <app-recurso id="emt"
+                [linkFoto]="emtData.linkFoto" [nombre]="emtData.nombre" [empresa]="emtData.empresa"
+                [web]="emtData.web" [shortWeb]="emtData.shortWeb" [telefono]="emtData.telefono" [email]="emtData.email"
+                [ofrece]="emtData.ofrece" [descargaios]="emtData.descargaios"
+                [descargaAndr]="emtData.descargaAndr">
+            </app-recurso>
+
+            <app-recurso id="fernanbus"
+                [linkFoto]="fernanbusData.linkFoto" [nombre]="fernanbusData.nombre"
+                [empresa]="fernanbusData.empresa" [web]="fernanbusData.web" [shortWeb]="fernanbusData.shortWeb"
+                [telefono]="fernanbusData.telefono" [email]="fernanbusData.email" [ofrece]="fernanbusData.ofrece"
+                [descargaios]="fernanbusData.descargaios" [descargaAndr]="fernanbusData.descargaAndr">
+            </app-recurso>
+
+        </article>
+
+        <!-- Metro y tren -->
+        <h3>Metro y tren</h3>
+        <article id="metro" class="subseccion-recursos metro">
+        <!-- Metrovalencia -->
+            <app-recurso id="metrovalencia"
+                [linkFoto]="metrovalenciaData.linkFoto" [nombre]="metrovalenciaData.nombre"
+                [empresa]="metrovalenciaData.empresa" [web]="metrovalenciaData.web" [shortWeb]="metrovalenciaData.shortWeb"
+                [telefono]="metrovalenciaData.telefono" [email]="metrovalenciaData.email"
+                [ofrece]="metrovalenciaData.ofrece" [descargaios]="metrovalenciaData.descargaios"
+                [descargaAndr]="metrovalenciaData.descargaAndr">
+            </app-recurso>
+
+        <!-- Renfe -->
+            <app-recurso id="renfe"
+                [linkFoto]="renfeData.linkFoto" [nombre]="renfeData.nombre" [empresa]="renfeData.empresa"
+                [web]="renfeData.web" [shortWeb]="renfeData.shortWeb" [telefono]="renfeData.telefono"
+                [email]="renfeData.email" [ofrece]="renfeData.ofrece" [descargaios]="renfeData.descargaios"
+                [descargaAndr]="renfeData.descargaAndr">
+            </app-recurso>
+        </article>
+
+        <!-- Bici -->
+        <h3>Bici</h3>
+        <article id="bici" class="subseccion-recursos bici">
+            <!-- Valenbisi -->
+            <app-recurso id="valenbisi"
+                [linkFoto]="valenbisiData.linkFoto" [nombre]="valenbisiData.nombre"
+                [empresa]="valenbisiData.empresa" [web]="valenbisiData.web" [shortWeb]="valenbisiData.shortWeb"
+                [telefono]="valenbisiData.telefono" [email]="valenbisiData.email" [ofrece]="valenbisiData.ofrece"
+                [descargaios]="valenbisiData.descargaios" [descargaAndr]="valenbisiData.descargaAndr">
+            </app-recurso>
+
+            <!-- Mibisi -->
+            <app-recurso id="mibisi"
+                [linkFoto]="mibisiData.linkFoto" [nombre]="mibisiData.nombre" [empresa]="mibisiData.empresa"
+                [web]="mibisiData.web" [shortWeb]="mibisiData.shortWeb" [telefono]="mibisiData.telefono"
+                [email]="mibisiData.email" [ofrece]="mibisiData.ofrece" [descargaios]="mibisiData.descargaios"
+                [descargaAndr]="mibisiData.descargaAndr">
+            </app-recurso>
+        </article>
+
+        <hr style="width:100%; margin: 5vh auto">
+
+        <h2>Transporte privado</h2>
+
+        <!-- Motos eléctricas -->
+        <h3>Motos eléctricas</h3>
+        <article id="motos" class="subseccion-recursos motos">
+            <!-- Acciona -->
+            <app-recurso id="acciona"
+                [linkFoto]="accionaData.linkFoto" [nombre]="accionaData.nombre" [empresa]="accionaData.empresa"
+                [web]="accionaData.web" [shortWeb]="accionaData.shortWeb" [telefono]="accionaData.telefono"
+                [email]="accionaData.email" [ofrece]="accionaData.ofrece" [descargaios]="accionaData.descargaios"
+                [descargaAndr]="accionaData.descargaAndr">
+            </app-recurso>
+
+            <!-- Cooltra -->
+            <app-recurso id="cooltra"
+                [linkFoto]="cooltraData.linkFoto" [nombre]="cooltraData.nombre" [empresa]="cooltraData.empresa"
+                [web]="cooltraData.web" [shortWeb]="cooltraData.shortWeb" [telefono]="cooltraData.telefono"
+                [email]="cooltraData.email" [ofrece]="cooltraData.ofrece" [descargaios]="cooltraData.descargaios"
+                [descargaAndr]="cooltraData.descargaAndr">
+            </app-recurso>
+
+            <!-- Otros servicios similares
+            <div class="recurso otros-recursos">
+                <header class="header-recurso">
+                    <div class="recurso-img-container">
+                        <img src="assets/img/scooter.jpg" alt="scooter">
+                    </div>
+                    <h2>Otros servicios similares</h2>
+                </header>
+
+                <main class="cuerpo-recurso">
+                    <p>YEGO:
+                        <span class="linkWeb"><a href="https://landing.rideyego.com/valence">landing.rideyego.com</a></span>
+                    </p>
+
+                    <p>OKMOBILITY:
+                        <span class="linkWeb"><a href="https://okmobility.com/es/rent/l/alquiler-moto/valencia">okmobility.com</a></span>
+                    </p>
+
+                    <p>RideOn:
+                        <span class="linkWeb"><a href="https://rideon.es/valencia/">rideon.es</a></span>
+                    </p>
+                </main>
+            </div> -->
+
+        </article>
+
+    </section>
+
+
+    <section id="gva" class="seccion-recursos gva">
+
+        <hr style="width:100%; margin: 5vh auto"> <!-- Separador de secciones -->
+
+        <h2>Apps Oficiales de la Generalitat Valenciana</h2>
+
+        <h3>GVA</h3>
+        <article id="gva" class="subseccion-recursos gva">
+
+            <app-recurso id="gva+salut"
+            [linkFoto]="GVASalutData.linkFoto" [nombre]="GVASalutData.nombre"
+            [empresa]="GVASalutData.empresa" [ofrece]="GVASalutData.ofrece"
+            [telefono]="GVASalutData.telefono"
+            [email]="GVASalutData.email" [contacto]="GVASalutData.contacto"
+            [web]="GVASalutData.web" [shortWeb]="GVASalutData.shortWeb"
+            [descargaios]="GVASalutData.descargaios" [descargaAndr]="GVASalutData.descargaAndr" >
+            </app-recurso>
+
+            <app-recurso id="labora"
+            [linkFoto]="LABORAData.linkFoto" [nombre]="LABORAData.nombre"
+            [empresa]="LABORAData.empresa" [ofrece]="LABORAData.ofrece"
+            [telefono]="LABORAData.telefono"
+            [email]="LABORAData.email" [contacto]="LABORAData.contacto"
+            [web]="LABORAData.web" [shortWeb]="LABORAData.shortWeb"
+            [descargaios]="LABORAData.descargaios" [descargaAndr]="LABORAData.descargaAndr" >
+            </app-recurso>
+
+        </article>
+
+    </section>
+
+
+</div>

@@ -1,0 +1,126 @@
+/* -------------------------------------------------- FORMULARIO --------------------------------------------------- */
+.login-container
+{
+  display: flex; justify-content: space-around; align-items: center;
+  height: 90vh; width: fit-content;
+  max-width: 100%; max-height: 100%;
+  margin: 0 auto;
+}
+
+.login-form{ background-color: var(--item-background-semitransparent); backdrop-filter: blur(5px);}
+
+.login-form, .login-form *{font-size: auto; text-wrap: nowrap;}
+
+.login-form{
+  /* medidas */
+  height: fit-content; width: 100%;
+  /* display */
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  align-items: center; justify-content: space-between;
+  /* separaciones */
+  column-gap: 2vw; row-gap: 1.5vh;
+  padding: 3.5vh 3vw 2.5vh 3vw;
+  /* efectos: bordes y sombra */
+  border: solid transparent 2px; border-radius: 15px;
+  box-shadow: 0px 0px 25px 5px var(--item-background-semitransparent);
+}
+
+/* Elementos del formulario */
+.login-form div {display: flex; flex-direction: column;}
+
+/****** Top del formulario ******/
+.login-form label {margin-bottom: 1vh; font-size: 1.25vw;}
+
+.login-form div input, .login-form div select{
+  /* medidas */
+  height: 3vh; width: 15vw;
+  min-height: fit-content; max-height: 40px;
+  min-width: 150px; max-width: 100%;
+  /* separaciones */
+  padding: 1vh 0.5vw; /* Separación interior arriba y abajo en el recuadro de input */
+  /* texto */
+  font-size: 1.2vw;
+  /* color de fondo y bordes */
+  background-color: var(--subitem-background);
+  border: solid transparent 1px; border-radius: 5px;
+  border-left-width: 10px; /* Añade un espacio más grande al principio entre el texto y el container del input */
+}
+
+.login-form div .fecha{height: 3.2vh;}
+
+/* bottom del formulario */
+.login-form .submit-button-container, .mensaje{
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-items: center;
+}
+
+.submit-button-container{
+  height: fit-content;
+}
+
+#login .submit-button{
+    /* medidas */
+    height: 100%; width: 7vw;
+    min-height: 30px; min-width: 80px;
+    /* color de fondo y bordes */
+    background-color: var(--amarillo-main);
+    border: solid var(--amarillo-main) 1px;
+    /* letra */
+    color: var(--amarillo-enfasis);
+    cursor: pointer;
+    font-size: 1vw;
+    /* transición de hover y active */
+    transition: ease-in-out 0.3s;
+}
+
+#login .submit-button:hover{
+    background-color:#00a2ff;
+    border: solid #00a2ff 1px;
+    color:#005180;
+}
+
+#login .submit-button:active{
+    background-color: #005180;
+    border: solid #005180 1px;
+    color:#002940;
+}
+
+#login form .mensaje, #login form .asterisco{
+    font-size: 1vw;
+    align-items: flex-start;
+    color: var(--gris);
+}
+
+#login form .no-login {
+    display: flex; align-items: center;
+    font-size: 1.2vw;
+    text-decoration: underline;
+    transition: ease-in-out 80ms 50ms;
+}
+
+#login form .no-login:hover{ color: var(--amarillo-main); }
+
+#login form .no-login:active{ color: #005180; }
+
+@media screen and (max-width: 767px) {
+
+  .login-form div input, .login-form div select{
+    font-size: 2.5vw;
+    min-width: 1px; width: 80%;
+  }
+
+  .login-form label{
+    font-size: 2.55vw;
+  }
+
+  #login form .mensaje, #login form .asterisco, #login form .no-login{
+    font-size: 1.75vw;
+  }
+
+  #login .submit-button{
+    font-size: 2vw;
+  }
+
+}
