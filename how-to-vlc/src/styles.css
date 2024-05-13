@@ -1,18 +1,20 @@
 /******************************************************* COLORES ******************************************************/
 
 :root{ /* ¡¡IMPORTANTE!! Variables para los colores, usar estas y añadir colores aquí */
-    --background : #080735;
-    --item-background-semitransparent : hsla(258, 48%, 19%, 0.6);
-    --item-background : #271948;
-    --subitem-background : #271948a1;
+  --background : #080735;
+  --item-background-semitransparent : hsla(258, 48%, 19%, 0.6);
+  --item-background : #271948;
+  --subitem-background : #271948a1;
 
-    --amarillo-main : rgb(255, 234, 0);
-    --amarillo-enfasis : #826c00;
+  --amarillo-main : rgb(255, 234, 0);
+  --amarillo-enfasis : #826c00;
 
-    --placeholder-item : #646076;
+  --placeholder-item : #646076;
 
-    --gris : grey;
-    --blanco : white;
+  --gris : grey;
+  --blanco : white;
+
+  --boton-hover : rgba(255, 255, 255, 0.3);
 }
 
 /******************************************************* GENERAL ******************************************************/

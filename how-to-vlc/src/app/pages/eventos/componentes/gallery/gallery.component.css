@@ -14,8 +14,38 @@
   flex: 0 0 auto;
   margin-right: 10px;
   filter: drop-shadow(10px 10px 5px var(--subitem-background));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 200px;
 }
 
 .image img {
-  width: 200px;
+  width: auto;
+  height: 350px;
+  object-fit: cover;
+}
+
+.image:hover {
+  overflow: visible;
+  min-width: fit-content;
+
+}
+
+.image:hover img{
+  overflow: visible;
+  max-width: 100%;
+
+}
+
+.image button{
+  z-index: 999; 
+  background-color: var(--subitem-background);
+  cursor: pointer;
+  border: 2px rgba(255, 255, 255, 0.315)  solid ;
+}
+
+.image button:hover{
+  background-color: var(--boton-hover);
+
 }

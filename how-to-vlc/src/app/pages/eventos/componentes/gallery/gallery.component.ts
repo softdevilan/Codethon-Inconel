@@ -13,7 +13,7 @@ export class GalleryComponent {
   startScrollLeft!: number;
 
   images = [
-    { url: 'https://grupomemorable.com/wp-content/uploads/2024/03/SACUDELO-27MARZO.jpg', alt: 'Imagen 1' },
+    { url: 'https://gocelebrain.com/pub/media/catalog/product/6/1/6197706_orig_2.jpg?width=130&store=default&image-type=thumbnail', alt: 'Imagen 1' },
     { url: 'https://grupomemorable.com/wp-content/uploads/2024/03/SS-MOLI-LIGHT_01st.jpg', alt: 'Imagen 2' },
     { url: 'https://grupomemorable.com/wp-content/uploads/2023/06/JV_SOFOCCO_10JULIO.jpg', alt: 'Imagen 3' },
     { url: 'https://grupomemorable.com/wp-content/uploads/2023/06/JV_11JULIO.jpg', alt: 'Imagen 4' },
@@ -47,5 +47,3 @@ export class GalleryComponent {
     this.dragging = false;
   }
 }
-
-
