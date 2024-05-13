@@ -1,5 +1,6 @@
 import { formatDate } from '@angular/common';
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,23 +8,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  username: string = '';
+  password: string = '';
+  isAuthenticated = false;
+  nombreUsuario = '';
 
-  name!: string;
-  surname?: string;
-  email!: string;
-  username!: string;
-  password!: string;
-  birthdate!: Date;
-
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   login() {
-    console.log(this.name);
-    console.log(this.surname);
-    console.log(this.email);
-    console.log(this.username);
-    console.log(this.password);
-    console.log(this.birthdate);
+    const nombre = this.authService.login(this.username, this.password);
+    if (nombre) {
+      
+      this.isAuthenticated = true;
+      this.nombreUsuario = nombre;
+      
+    } else {
+
+      console.log('Usuario o contraseña incorrectos.');
+
+    }
   }
+
 }
 

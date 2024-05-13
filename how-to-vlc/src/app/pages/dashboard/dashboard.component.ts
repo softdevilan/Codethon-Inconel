@@ -1,6 +1,8 @@
+import { LoginComponent } from './../login/login.component';
 import { Component, OnInit } from '@angular/core';
 import { GalleryComponent } from '../eventos/componentes/gallery/gallery.component';
 import { LocalidadesServicesService } from 'src/app/services/localidades-services.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +10,13 @@ import { LocalidadesServicesService } from 'src/app/services/localidades-service
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+
+  
+  authService = new AuthService;
+  login = new LoginComponent(this.authService);
+
+  isAuthenticated = this.login.isAuthenticated;
+  nombreUsuario = this.login.nombreUsuario;
 
   fotosEventos = new GalleryComponent; //Instancia del componente GalleryComponent para acceder al array de imagenes
 

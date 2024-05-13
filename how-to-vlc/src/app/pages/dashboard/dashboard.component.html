@@ -5,7 +5,8 @@
 
     <article class="greeting-area dashboard-item container item full-size">
 
-      <h2>Bon dia, John Doe!</h2>
+      <h2 *ngIf="isAuthenticated">Bon dia, {{ nombreUsuario }}</h2>
+      <h2 *ngIf="!isAuthenticated">Bon dia!</h2>
 
     </article>
 

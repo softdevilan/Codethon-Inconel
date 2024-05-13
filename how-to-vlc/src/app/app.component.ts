@@ -7,6 +7,7 @@ import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
 })
 
 export class AppComponent implements OnInit {
+  
   title = 'how-to-vlc';
   private intervalId: any;
 
