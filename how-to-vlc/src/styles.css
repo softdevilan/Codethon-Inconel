@@ -23,7 +23,7 @@
 *{
   font-family: "Mukta", Arial, Helvetica, sans-serif;
   color: var(--blanco);
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /******************************************************* BODY ******************************************************/
