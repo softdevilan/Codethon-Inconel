@@ -1,4 +1,4 @@
-section{
+section {
     z-index: 9999;
     position: fixed;
     width: 100%;
@@ -8,9 +8,21 @@ section{
 }
 
 
-.container{
-    display: flex;
+
+.container {
     background-color: var(--background-evento);
-    
-    
+    border: 1px solid transparent;
+    border-radius: 10px;
+    max-height: 500px;
 }
+
+.container div{
+    height: auto; /* Ajusta la altura de la imagen automáticamente para mantener la relación de aspecto */
+}
+
+
+.container div img {
+    height: 60vh; /* Ajusta la altura de la imagen automáticamente para mantener la relación de aspecto */
+    object-fit: scale-down; /* Ajusta la imagen dentro del contenedor sin distorsionar su relación de aspecto */
+}
+
