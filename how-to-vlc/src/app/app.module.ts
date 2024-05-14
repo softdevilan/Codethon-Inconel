@@ -16,6 +16,9 @@ import { GalleryComponent } from './pages/eventos/componentes/gallery/gallery.co
 import { LocalidadesServicesService } from './services/localidades-services.service';
 import { RegisterComponent } from './pages/register/register.component';
 import { GradientComponent } from './components/gradient/gradient.component';
+import { EventoComponent } from './pages/eventos/componentes/evento/evento.component';
+
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { GradientComponent } from './components/gradient/gradient.component';
     GalleryComponent,
     RegisterComponent,
     GradientComponent,
+    EventoComponent,
+
+
   ],
   imports: [
     BrowserModule,
