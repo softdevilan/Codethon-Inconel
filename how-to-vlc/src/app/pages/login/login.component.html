@@ -3,12 +3,12 @@
 
     <div>
       <label for="usuario">Nombre de usuario: </label>
-      <input type="text" [(ngModel)]="username" required>
+      <input type="text" name="username" [(ngModel)]="username" required> <!-- Agrega el atributo name -->
     </div>
-
+    
     <div>
       <label for="contrasena">Contraseña: </label>
-      <input type="password" name="password" [(ngModel)]="password" required>
+      <input type="password" name="password" [(ngModel)]="password" required> <!-- Agrega el atributo name -->
     </div>
 
     <div class="submit-button-container">
