@@ -24,6 +24,10 @@ export class AuthService {
     }
   }
 
+  logout() {
+    this.isLoggedIn = false; // Establece el estado de autenticación a falso al cerrar la sesión
+  }
+
   obtenerNombreUsuario(): string {
     return this.nombreUsuario;
   }
