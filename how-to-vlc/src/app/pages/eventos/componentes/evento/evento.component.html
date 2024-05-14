@@ -1,13 +1,33 @@
-<section class="col-12">
-    <div class="container col-lg-6">
+<section id="pagina-evento" class="col-12 d-flex justify-content-center align-items-center">
+    <div id="evento" class="container col-lg-6 p-3 text-center">
         <div class="row">
-            <div class="col-md-6">
-                <img src="https://grupomemorable.com/wp-content/uploads/2023/06/JV_SOFOCCO_10JULIO.jpg" class="img-fluid" alt="">
+            <div class="evento contenedor col-md-6">
+                <img [src]="foto" class="img-fluid" alt="">
             </div>
             <div class="col-md-6">
-                <h2>Nombre evento</h2>
-                <p>Descripción evento</p>
+                <h2>{{nombre}}</h2>
+                <p>{{descripcion}}</p>
             </div>
         </div>
     </div>
 </section>
+<script>
+    function mostrarSeccion() {
+            var seccion = document.getElementById('pagina-evento');
+            seccion.style.display = 'block';
+        }
+ 
+        function ocultarSeccion() {
+            var seccion = document.getElementById('pagina-evento');
+            seccion.style.display = 'none';
+        }
+ 
+        // Detectar clics fuera del div y ocultar la sección
+        window.addEventListener('click', function(event) {
+            var seccion = document.getElementById('pagina-evento');
+            var div = document.getElementById('evento');
+            if (event.target !== div && !div.contains(event.target)) {
+                seccion.style.display = 'none';
+            }
+        });
+</script>

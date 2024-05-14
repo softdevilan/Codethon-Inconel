@@ -2,7 +2,7 @@
   <div class="gallery">
     <div class="image" *ngFor="let image of images">
       <img [src]="image.url" [alt]="image.alt" draggable="false">
-      <button class="boton-evento">Ver evento</button>
+      <button onclick="mostrarSeccion()" class="boton-evento">Ver evento</button>
     </div>
   </div>
 </div>
