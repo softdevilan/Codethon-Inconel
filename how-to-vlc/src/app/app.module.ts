@@ -20,6 +20,8 @@ import { EventoComponent } from './pages/eventos/componentes/evento/evento.compo
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,6 @@ import { EventoComponent } from './pages/eventos/componentes/evento/evento.compo
     RegisterComponent,
     GradientComponent,
     EventoComponent,
-
 
   ],
   imports: [

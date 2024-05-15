@@ -3,7 +3,9 @@
   overflow-x: hidden;
   width: 100%;
 }
-
+a{
+  color: white;
+}
 .gallery {
   display: flex;
   padding: 1vh 0;
