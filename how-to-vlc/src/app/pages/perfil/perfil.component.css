@@ -31,7 +31,7 @@
 .posts-container{ padding: 3vh 1vw; row-gap: 1vh; }
 .post-container img{ border-top-left-radius: 1vw; border-top-right-radius: 1vw;}
 .post-container .caption{ 
-    margin: 0; padding: 0.75em; font-weight: 400; 
+    margin: 0; padding: 1.5em; font-weight: 400; 
     background-color: hsla(0, 0%, 57%, 0.112);
     border-bottom-left-radius: 1vw;
 }
