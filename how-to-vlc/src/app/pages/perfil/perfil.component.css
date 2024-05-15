@@ -3,6 +3,7 @@
 .top-profile, .posts-container {    
     background-color: #d7dae108;
     backdrop-filter: blur(50px);
+    border-radius: 0.75vw;
 }
 
 .top-profile {
@@ -17,16 +18,27 @@
 }
 
 .profile-image-container img{
-    border-radius: 10vw;
+    border-radius: 50%;
     border: solid 0.3vw rgba(255, 255, 255, 0.359);
     filter: drop-shadow(0 0 50px var(--background));
 }
 
 .username-section{ gap: 1.5vw; }
 
-.profile-posts {margin: 15vh auto 10vh auto;}
+.profile-posts { margin: 15vh auto 10vh auto; }
+.profile-posts h2 { font-size: 4vh; margin-bottom: 2vh;}
 
-.post-container{ padding: 2vh 2vw; }
+.posts-container{ padding: 3vh 1vw; row-gap: 1vh; }
+.post-container img{ border-top-left-radius: 1vw; border-top-right-radius: 1vw;}
+.post-container .caption{ 
+    margin: 0; padding: 0.75em; font-weight: 400; 
+    background-color: hsla(0, 0%, 57%, 0.112);
+    border-bottom-left-radius: 1vw;
+}
+.caption h2{ font-size: 2.8vh; text-align: center; }
+.caption p{ font-size: 2vh; font-weight: 200;}
 
-.username-section i, .username-section h2{font-size: 2.5vw; margin: 0;}
+.username-section i, .username-section h2{ margin: 0; }
+.user-name{ font-size: 2.5vw; }
+.username{ font-size: 1.75vw; color: rgb(126, 126, 126); }
 

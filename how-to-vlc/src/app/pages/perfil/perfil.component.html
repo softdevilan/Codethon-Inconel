@@ -8,7 +8,8 @@
 
   <div class="profile-section username-section col-9">
 
-    <h2>Nombre</h2> <i class="bi-person-check"></i>
+    <h2 class="user-name"> {{ nombreUsuario }} <i class="bi-person-check"></i> </h2> 
+    <h2 class="username"> @{{ username }} </h2>
 
     <!-- todo: conecta el servicio de auth -->
   </div>
@@ -17,21 +18,37 @@
 
 <div class="container profile-posts">
 
-  <div class="col-12 posts-header">
-    <h2>Eventos publicados</h2>
-  </div>
-  <div class="col-12 posts-container">
+  <h2>Eventos publicados por ti</h2>
+  <div class="row posts-container">
 
-    <div class="col-4 post-container">
-      <img class="col-12" src="../../../assets/img/foto-perfil.jpg" alt="">
-    </div>
-    <div class="col-4 post-container">
-      <img class="col-12" src="../../../assets/img/foto-perfil.jpg" alt="">
-    </div>
-    <div class="col-4 post-container">
-      <img class="col-12" src="../../../assets/img/foto-perfil.jpg" alt="">
+    <div class="post-container col-lg-4 col-md-6 col-sm-12">
+      
+      <img class="img-fluid" [src]="fotosEventos.images[1].url" alt="">
+      <div class="caption">
+        <h3>Semana Santa 2024!!</h3> 
+        <p>Prepárate para la noche más candente de Valencia con Sofoco! Este lunes(...)</p>
+      </div>
+      
     </div>
 
+    <div class="post-container col-lg-4 col-md-6 col-sm-12">
+      <img class="img-fluid" [src]="fotosEventos.images[2].url" alt="">
+      <div class="caption">
+        <h3>SO(FO)CCO Jávea!</h3>
+        <p>Prepárate para la noche más candente de Valencia con Sofoco! Este lunes(...)</p>
+      </div>
+    </div>
+
+    <div class="post-container col-lg-4 col-md-6 col-sm-12">
+      <img class="img-fluid" [src]="fotosEventos.images[3].url" alt="">
+      <div class="caption">
+        <h3>Llega JÁVEA VIVEZ!</h3>
+        <p>Prepárate para la noche más candente de Valencia con Sofoco! Este lunes(...)</p>
+      </div>
+    </div>
+    
+
   </div>
+
 
 </div>
