@@ -17,9 +17,21 @@ import { LocalidadesServicesService } from './services/localidades-services.serv
 import { RegisterComponent } from './pages/register/register.component';
 import { GradientComponent } from './components/gradient/gradient.component';
 import { EventoComponent } from './pages/eventos/componentes/evento/evento.component';
+import { NgxIndexedDBModule, DBConfig } from 'ngx-indexed-db';
 
-
-
+const dbConfig: DBConfig = {
+  name: 'MyDb',
+  version: 1,
+  objectStoresMeta: [
+    {
+      store: 'users',
+      storeConfig: { keyPath: 'id', autoIncrement: true },
+      storeSchema: [
+        { name: 'name', keypath: 'name', options: { unique: false } }
+      ]
+    }
+  ]
+};
 
 
 @NgModule({
@@ -43,7 +55,8 @@ import { EventoComponent } from './pages/eventos/componentes/evento/evento.compo
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxIndexedDBModule.forRoot(dbConfig)
   ],
   providers: [LocalidadesServicesService],
   bootstrap: [AppComponent]

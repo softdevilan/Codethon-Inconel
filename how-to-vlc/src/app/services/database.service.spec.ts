@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ConexionBbddService } from './conexion-bbdd.service';
+import { DataService } from './database.service';
 
 describe('ConexionBbddService', () => {
-  let service: ConexionBbddService;
+  let service: DataService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ConexionBbddService);
+    service = TestBed.inject(DataService);
   });
 
   it('should be created', () => {
