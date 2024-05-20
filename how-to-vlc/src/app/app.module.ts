@@ -24,10 +24,35 @@ const dbConfig: DBConfig = {
   version: 1,
   objectStoresMeta: [
     {
-      store: 'users',
+      store: 'usuarios',
       storeConfig: { keyPath: 'id', autoIncrement: true },
       storeSchema: [
-        { name: 'name', keypath: 'name', options: { unique: false } }
+        { name: 'nombre_usuario', keypath: 'nombre_usuario', options: { unique: true } },
+        { name: 'nombre', keypath: 'nombre', options: { unique: false } },
+        { name: 'apellido', keypath: 'apellido', options: { unique: false } },
+        { name: 'email', keypath: 'email', options: { unique: false } },
+        { name: 'contrasena', keypath: 'contrasena', options: { unique: false } },
+        { name: 'fecha_nacimiento', keypath: 'fecha_nacimiento', options: { unique: false } }
+      ]
+    },
+    {
+      store: 'eventos_proximos',
+      storeConfig: { keyPath: 'id', autoIncrement: true },
+      storeSchema: [
+        { name: 'nombre_evento', keypath: 'nombre_evento', options: { unique: true } },
+        { name: 'fecha_evento', keypath: 'fecha_evento', options: { unique: false } },
+        { name: 'hora_evento', keypath: 'hora_evento', options: { unique: false } },
+        { name: 'localizacion_evento', keypath: 'localizacion_evento', options: { unique: false } },
+        { name: 'comentarios', keypath: 'comentarios', options: { unique: false } },
+        { name: 'organizador', keypath: 'organizador', options: { unique: false } }
+      ]
+    },
+    {
+      store: 'imagenes',
+      storeConfig: { keyPath: 'id', autoIncrement: true },
+      storeSchema: [
+        { name: 'nombre', keypath: 'nombre', options: { unique: true } },
+        { name: 'datosImg', keypath: 'datosImg', options: { unique: false } },
       ]
     }
   ]
