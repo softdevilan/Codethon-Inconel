@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+ 
 @Component({
   selector: 'app-evento',
   templateUrl: './evento.component.html',
@@ -10,11 +10,11 @@ export class EventoComponent implements OnInit {
   @Input() nombre!:string;
   @Input() descripcion!:string;
   constructor(){
-
+ 
   }
-
+ 
   ngOnInit(): void {
-    
+   
   }
-
+ 
 }
