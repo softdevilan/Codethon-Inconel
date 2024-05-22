@@ -107,40 +107,41 @@
     <article class="red-social dashboard-item dashboard-items-container full-size two-items container item"
       style="min-height: fit-content;">
 
-      <form>
+      <form (ngSubmit)="onSubmit()">
         <div class="section-header">
           <h2> ¡Te propongo un plan! </h2>
         </div>
-
+      
         <!-- Título del evento -->
-        <input class="nombreEvento" type="text" id="nombreEvento" name="nombreEvento" placeholder="ej. Concierto SKA-P"
-          required>
-
+        <input class="nombreEvento" type="text" id="nombreEvento" name="nombreEvento" [(ngModel)]="newEvento.nombreEvento"
+          placeholder="ej. Concierto SKA-P" required>
+      
         <!-- Selector de fecha y hora -->
         <label for="fechaHora">¿Cuándo?</label>
-        <input type="datetime-local" id="fechaHora" name="fechaHora" required>
-
+        <input type="datetime-local" id="fechaHora" name="fechaHora" [(ngModel)]="newEvento.fechaHora" required>
+      
         <!-- Desplegable de ubicación dentro de Valencia -->
         <label for="ubicacion">¿Dónde?</label>
-        <select id="ubicacion" name="ubicacion" required>
+        <select id="ubicacion" name="ubicacion" [(ngModel)]="newEvento.ubicacion" required>
           <option *ngFor="let localidad of localidades" [value]="localidad.CUN">
             {{ localidad.DMUN50 }}
           </option>
         </select>
-
+      
         <!-- Recuadro de texto -->
         <label for="comentarios"></label>
-        <textarea id="comentarios" name="comentarios" rows="4" cols="50"
+        <textarea id="comentarios" name="comentarios" [(ngModel)]="newEvento.comentarios" rows="4" cols="50"
           placeholder="¿Es gratis? ¿Tenéis un grupo de WhatsApp? ¿Hay comida? ¡Danos más detalles!"></textarea>
-
+      
         <!-- Añadir foto -->
         <label for="photo">¡Ilústranos!:</label>
-        <input type="file" id="photo" name="photo" accept="image/*" required>
-
+        <input type="file" id="photo" name="photo" (change)="onFileChange($event)" accept="image/*" required>
+      
         <!-- Botón de publicar -->
         <input class="button" type="submit" value="Publicar">
       </form>
 
+    
       <a routerLink="../eventos" class="img-container" style="flex-direction: column;">
 
         <div class="section-header">
