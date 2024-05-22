@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RecursosComponent } from './pages/recursos/recursos.component';
 import { RecursoComponent } from './pages/recursos/componentes/recurso/recurso.component';
 import { EventosComponent } from './pages/eventos/eventos.component';
+import { EventoComponent } from './pages/eventos/componentes/evento/evento.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -33,6 +34,10 @@ const routes: Routes = [{
   component: EventosComponent
 },
 {
+  path: 'evento',
+  component: EventoComponent
+},
+{
   path: 'perfil',
   component: PerfilComponent
 },
@@ -40,6 +45,8 @@ const routes: Routes = [{
   path: '', redirectTo: 'login', pathMatch: 'full'
 }
 ];
+
+
 
 export const routing = RouterModule.forRoot(routes);
 
