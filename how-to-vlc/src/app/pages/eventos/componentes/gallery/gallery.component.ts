@@ -1,11 +1,11 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, HostListener } from '@angular/core';
  
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
-export class GalleryComponent {
+export class GalleryComponent implements AfterViewInit {
   @ViewChild('gallery') gallery!: ElementRef;
  
   dragging = false;
@@ -30,20 +30,63 @@ export class GalleryComponent {
     { url: 'https://grupomemorable.com/wp-content/uploads/2023/03/IMG-20221129-WA0023.jpg', alt: 'Imagen 15' },
   ];
  
+  ngAfterViewInit() {
+    this.cloneImages();
+    this.gallery.nativeElement.scrollLeft = this.gallery.nativeElement.offsetWidth;
+  }
+ 
+  cloneImages() {
+    const galleryElement = this.gallery.nativeElement;
+    galleryElement.innerHTML += galleryElement.innerHTML;
+  }
+ 
+  @HostListener('window:mouseup')
+  onMouseUp() {
+    this.dragging = false;
+    this.checkBoundary();
+  }
+ 
+  @HostListener('window:touchend')
+  onTouchEnd() {
+    this.dragging = false;
+    this.checkBoundary();
+  }
+ 
   onMouseDown(event: MouseEvent) {
-    this.dragging = true;
-    this.startX = event.pageX - this.gallery.nativeElement.offsetLeft;
-    this.startScrollLeft = this.gallery.nativeElement.scrollLeft;
+    this.startDragging(event.pageX);
   }
  
   onMouseMove(event: MouseEvent) {
+    this.move(event.pageX);
+  }
+ 
+  onTouchStart(event: TouchEvent) {
+    this.startDragging(event.touches[0].pageX);
+  }
+ 
+  onTouchMove(event: TouchEvent) {
+    this.move(event.touches[0].pageX);
+  }
+ 
+  private startDragging(startX: number) {
+    this.dragging = true;
+    this.startX = startX - this.gallery.nativeElement.offsetLeft;
+    this.startScrollLeft = this.gallery.nativeElement.scrollLeft;
+  }
+ 
+  private move(currentX: number) {
     if (!this.dragging) return;
-    const x = event.pageX - this.gallery.nativeElement.offsetLeft;
+    const x = currentX - this.gallery.nativeElement.offsetLeft;
     const walk = (x - this.startX) * 1;
     this.gallery.nativeElement.scrollLeft = this.startScrollLeft - walk;
   }
  
-  onMouseUp() {
-    this.dragging = false;
+  private checkBoundary() {
+    const galleryElement = this.gallery.nativeElement;
+    if (galleryElement.scrollLeft === 0) {
+      galleryElement.scrollLeft = galleryElement.scrollWidth / 2;
+    } else if (galleryElement.scrollLeft >= galleryElement.scrollWidth / 2) {
+      galleryElement.scrollLeft = galleryElement.scrollLeft - galleryElement.scrollWidth / 2;
+    }
   }
 }

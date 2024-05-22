@@ -1,8 +1,11 @@
-<div class="gallery-container" #gallery (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)" (mouseup)="onMouseUp()">
+<div class="gallery-container" #gallery (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)" (mouseup)="onMouseUp()"
+  (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd()">
   <div class="gallery">
     <div class="image" *ngFor="let image of images">
       <img [src]="image.url" [alt]="image.alt" draggable="false">
-      <button class="boton-evento"><a routerLink="../evento">Ver evento</a></button>
+      <button class="boton-evento">
+        <a routerLink="../evento">Ver evento</a>
+      </button>
     </div>
   </div>
 </div>

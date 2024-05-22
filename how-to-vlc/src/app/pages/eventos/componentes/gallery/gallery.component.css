@@ -3,15 +3,17 @@
   overflow-x: hidden;
   width: 100%;
 }
-a{
+ 
+a {
   color: white;
 }
+ 
 .gallery {
   display: flex;
   padding: 1vh 0;
   background-color: var(--item-background-semitransparent);
 }
-
+ 
 .image {
   flex: 0 0 auto;
   margin-right: 10px;
@@ -21,33 +23,30 @@ a{
   overflow: hidden;
   width: 200px;
 }
-
+ 
 .image img {
   width: auto;
   height: 350px;
   object-fit: cover;
 }
-
+ 
 .image:hover {
   overflow: visible;
   min-width: fit-content;
-
 }
-
-.image:hover img{
+ 
+.image:hover img {
   overflow: visible;
   max-width: 100%;
-
 }
-
-.image button{
-  z-index: 999; 
+ 
+.image button {
+  z-index: 999;
   background-color: var(--subitem-background);
   cursor: pointer;
-  border: 2px rgba(255, 255, 255, 0.315)  solid ;
+  border: 2px rgba(255, 255, 255, 0.315) solid;
 }
-
-.image button:hover{
+ 
+.image button:hover {
   background-color: var(--boton-hover);
-
 }
