@@ -107,7 +107,7 @@
     <article class="red-social dashboard-item dashboard-items-container full-size two-items container item"
       style="min-height: fit-content;">
 
-      <form>
+      <form *ngIf="isAuthenticated">
         <div class="section-header">
           <h2> ¡Te propongo un plan! </h2>
         </div>
@@ -139,6 +139,22 @@
 
         <!-- Botón de publicar -->
         <input class="button" type="submit" value="Publicar">
+      </form>
+
+      <form *ngIf="!isAuthenticated">
+        <h1 style="text-align: center; font-size: 3vw;"> Solo los usuarios registrados pueden crear eventos </h1>
+        <div class="section-header">
+          <h2 style="text-align: center;"> ¡Inicia sesión para poder crear un evento! </h2>
+        </div>
+
+        <input class="button" type="submit" routerLink="../login" value="¡Inicia sesión!">
+
+        <div class="section-header">
+          <h2> ¿Aún no tienes cuenta? </h2>
+        </div>
+
+        <input class="button" type="submit" routerLink="../register" value="¡Regístrate!">
+
       </form>
 
       <a routerLink="../eventos" class="img-container" style="flex-direction: column;">
