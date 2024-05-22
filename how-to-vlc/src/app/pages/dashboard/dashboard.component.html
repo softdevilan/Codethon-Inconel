@@ -107,11 +107,7 @@
     <article class="red-social dashboard-item dashboard-items-container full-size two-items container item"
       style="min-height: fit-content;">
 
-<<<<<<< HEAD
-      <form *ngIf="isAuthenticated">
-=======
-      <form (ngSubmit)="onSubmit()">
->>>>>>> c48c54e9402227b615f6c9565c11b5329abc4d0c
+      <form *ngIf="isAuthenticated" (ngSubmit)="onSubmit()">
         <div class="section-header">
           <h2> ¡Te propongo un plan! </h2>
         </div>
@@ -145,7 +141,6 @@
         <input class="button" type="submit" value="Publicar">
       </form>
 
-<<<<<<< HEAD
       <form *ngIf="!isAuthenticated">
         <h1 style="text-align: center; font-size: 3vw;"> Solo los usuarios registrados pueden crear eventos </h1>
         <div class="section-header">
@@ -162,9 +157,6 @@
 
       </form>
 
-=======
-    
->>>>>>> c48c54e9402227b615f6c9565c11b5329abc4d0c
       <a routerLink="../eventos" class="img-container" style="flex-direction: column;">
 
         <div class="section-header">
