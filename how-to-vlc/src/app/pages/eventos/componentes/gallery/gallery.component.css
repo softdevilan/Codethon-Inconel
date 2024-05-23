@@ -21,25 +21,26 @@ a {
   filter: drop-shadow(10px 10px 5px var(--subitem-background));
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: hidden; /* Initially hidden */
   width: 200px;
+  transition: width 0.4s ease-in-out; /* Transition for width */
 }
- 
+
 .image img {
   width: auto;
   height: 350px;
   object-fit: cover;
 }
- 
+
 .image:hover {
-  overflow: visible;
-  min-width: fit-content;
+  width: 300px; /* Adjust to desired width on hover */
 }
- 
+
 .image:hover img {
-  overflow: visible;
   max-width: 100%;
+  transition: width 0.4s ease-in-out; /* Transition for width of the image */
 }
+
  
 .image button {
   z-index: 999;
