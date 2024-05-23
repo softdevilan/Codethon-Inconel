@@ -1,12 +1,44 @@
-<section>
-<!--   <div class="container">
-    <button class="filtro">Filtro</button>
-  </div> -->
+<div class="container-fluid main">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">HowToVLC</a>
+      </div>
+    </div>
+  </nav>
+ 
+  <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel" data-interval="4000">
+    <div class="carousel-inner" role="listbox">
+      <div class="">
+        <img class="topEventos" src="https://www.spain.info/.content/imagenes/cabeceras-grandes/valencia/ciudad-artes-ciencias-valencia-c-luca-bravo-u-UyUjtbu5vj4.jpg" alt="">
+      </div>
+    </div>
+  </div>
+ 
+  <div class="covertext">
+    <div class="col-lg-10" style="float:none; margin:0 auto;">
+      <h1 class="title">Eventos creados por usuarios de toda Valencia</h1>
+      <h3 class="subtitle">¡Disfruta la experiencia HowToVLC!</h3>
+    </div>
+    <div class="col-xs-12 explore">
+      <a href="eventos/#eventoArriba">
+        <button type="button" class="btn btn-lg explorebtn" href="">↓ Explorar ↓</button>
+      </a>
+    </div>
+  </div>
+</div>
+ 
+<section id="eventoArriba">
   <h1>Ocio Nocturno</h1>
   <app-gallery></app-gallery>
   <h1>Eventos Artísticos</h1>
   <app-gallery></app-gallery>
   <h1>Eventos Culturales</h1>
   <app-gallery></app-gallery>
-
 </section>
+
+<script>
+  document.getElementById('explorebtn').addEventListener('click', function() {
+  document.getElementById('eventoArriba').scrollIntoView({ behavior: 'smooth' });
+});
+</script>

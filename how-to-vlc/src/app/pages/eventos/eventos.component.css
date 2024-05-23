@@ -1,31 +1,164 @@
-/* /* section {
+/* General Styles */
+body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  scroll-behavior: smooth;
 }
-
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px;
-  align-items: end;
-  justify-content: end;
-  text-align: end;
-} */
-
-.filtro {
-  background-color: transparent;
-  border: 2px solid #333;
-  color: #333;
-  padding: 60px 50px;
-  font-size: 40px;
-  cursor: pointer;
+ 
+section {
+  margin-top: 120px; /* Ajusta este valor según lo cerca que desees que estén */
 }
-
+ 
 h1 {
   margin-left: 40px;
   padding: 0;
-  font-size: 30px;
+  font-weight: 600;
+  font-size: 5vw;
   color: white;
   text-align: center;
+}
+ 
+/* Main Container */
+.container-fluid.main {
+  position: relative; /* To make the navbar positions relative to this container */
+  padding: 0;
+}
+ 
+/* Navbar Styles */
+.navbar-default {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+ 
+.navbar-default .navbar-brand {
+  font-family: Verdana;
+  color: #ffffff;
+  font-size: 20px;
+}
+ 
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+ 
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+ 
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+}
+ 
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+ 
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+ 
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+ 
+/* Carousel Styles */
+.carousel{
+  height: 110vh;
+}
+ 
+.topEventos{
+  opacity: 0.6;
+}
+ 
+@media screen and (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas */
+  .covertext {
+    top: 100px; /* Ajuste de posición para pantallas más pequeñas */
+  }
+ 
+  .title {
+    font-size: 40px; /* Ajuste del tamaño del título para pantallas más pequeñas */
+  }
+ 
+  .subtitle {
+    font-size: 18px; /* Ajuste del tamaño del subtítulo para pantallas más pequeñas */
+  }
+  
+h1 {
+  font-size: 40px;
+}
+
+.title {
+  font-size: 60px;
+}
+ 
+.subtitle {
+  font-size: 10px;
+}
+}
+ 
+/* Cover Text Styles */
+.covertext {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+}
+ 
+.title {
+  font-family: Verdana;
+  font-weight: 600;
+  font-size: 4vw;
+  color: #ffffff;
+  text-align: center;
+}
+ 
+.subtitle {
+  font-family: Verdana;
+  font-size: 2.5vw;
+  color: #ffffff;
+  text-align: center;
+}
+ 
+.explore {
+  text-align: center;
+  margin-top: 10px;
+}
+ 
+.explore .btn-lg {
+  border-radius: 30px;
+  padding: 15px 25px;
+  font-size: 22px;
+  background-color: #FF4000;
+  border-color: #FF4000;
+  color: #ffffff;
+}
+ 
+.btn {
+  border-radius: 0;
+  background-color: #FF4000;
+  border-color: #FF4000;
+  color: #ffffff;
+  margin-bottom: 20px;
+  box-shadow: none;
+  outline: none;
+}
+ 
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  color: #ffffff;
+  outline: none;
 }
