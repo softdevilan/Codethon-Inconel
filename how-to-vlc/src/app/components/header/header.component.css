@@ -9,51 +9,51 @@
 
 /* Movil */
 @media screen and (max-width: 850px) {
-
-  .header,
-  .container-menu,
-  .check {
+  /* Ocultar el encabezado de PC y el menú lateral */
+  .header, .container-menu, .check {
     display: none;
   }
 
+  /* Estilos para el encabezado móvil */
   .header-mobile {
     width: 100%;
     height: 80px;
     position: fixed;
-    bottom: 0;
+    bottom: 0; /* Fijar en la parte inferior */
     left: 0;
     background-color: var(--item-background-semitransparent);
     backdrop-filter: blur(4px);
     z-index: 9999;
+    display: block;
   }
 
   .header-mobile .containerM {
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 100%;
   }
 
-  .containerM i{
+  .containerM i {
     font-size: 22px;
   }
 
-  .header-mobile .containerM a {
+  .header-mobile a {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
-    width: 20%;
+    width: 25%; /* Cambiado a 25% para ocupar el ancho de la página sin desbordarse */
     text-align: center;
-    transition: color 0.3s ease;
-    transition: transform 0.3s ease;
-    /* Agregamos una transición de transformación */
+    transition: color 0.3s ease, transform 0.3s ease;
   }
 
-  .header-mobile .containerM a:hover {
+  .header-mobile a:hover {
     transform: scale(1.1);
   }
 }
+
+
+
 
 
 /* PC */
