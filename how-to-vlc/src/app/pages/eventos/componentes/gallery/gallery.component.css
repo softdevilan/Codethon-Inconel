@@ -1,4 +1,5 @@
 .gallery-container {
+  margin-bottom: 5%;
   display: flex;
   overflow-x: hidden;
   width: 100%;
@@ -22,18 +23,18 @@ a {
   display: flex;
   flex-direction: column;
   overflow: hidden; /* Initially hidden */
-  width: 200px;
+  width: 250px;
   transition: width 0.4s ease-in-out; /* Transition for width */
 }
 
 .image img {
   width: auto;
-  height: 350px;
+  height: 450px;
   object-fit: cover;
 }
 
 .image:hover {
-  width: 300px; /* Adjust to desired width on hover */
+  width: 350px; /* Adjust to desired width on hover */
 }
 
 .image:hover img {
