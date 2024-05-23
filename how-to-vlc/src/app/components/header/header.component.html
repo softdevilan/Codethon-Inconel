@@ -11,7 +11,7 @@
     <a routerLink="dashboard"><i class="bi bi-house-fill"></i></a>
     <a routerLink="eventos"><i class="fa-solid fa-calendar"></i></a>
     <a routerLink="recursos"><i class="fa-solid fa-circle-question"></i></a>
-    <a routerLink="perfil"><i class="bi bi-person-fill"></i></a>
+    <a *ngIf="isAuthenticated" routerLink="perfil"><i class="bi bi-person-fill"></i></a>
   </div>
 </header>
 
