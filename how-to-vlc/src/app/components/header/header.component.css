@@ -116,10 +116,9 @@
   }
 
   .container-menu {
+    display: flex;
     position: fixed;
-    background-color: var(--item-background-semitransparent);
-    backdrop-filter: blur(4px);
-    width: 15%;
+    width: 100%;
     height: 100%;
     top: 0;
     left: 0;
@@ -127,6 +126,16 @@
     opacity: 0;
     visibility: hidden;
   }
+  .container-menu .cont-menu{
+  width: 15%;
+  background-color: var(--item-background-semitransparent);
+  backdrop-filter: blur(4px);
+  }
+  
+  .container-menu #closeClick{
+    margin-left: 15%;
+    min-width: 85%;
+    }
 
   #btn-menu:checked~.container-menu {
     opacity: 1;
@@ -144,6 +153,15 @@
 
   #btn-menu:checked~.container-menu .cont-menu {
     transform: translateX(0%);
+  }
+  
+  #closeClick:checked~.container-menu .cont-menu {
+    transform: translateX(0%);
+  }
+
+  #closeClick:checked~.container-menu {
+    opacity: 1;
+    visibility: visible;
   }
 
   .cont-menu nav {
